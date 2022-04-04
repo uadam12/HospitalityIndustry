@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: silver;
+    color: #333;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+footer, .header {
+    background-color: crimson;
+    color: white;
+    padding: 4px 20px;
+}
+.header > p {text-align: right;}
+#timer {
+    background-color: darkviolet;
+    height: 7px;
+    transition: width .1s;
+}
+
+main {
+    width: 95%;
+    max-width: 700px;
+    margin: 20px auto 50px;
+    padding: 10px;
+    background-color: black;
+    box-shadow: 2px 2px 5px 5px #333;
+    border-radius: 1rem;
+}
+
+.img-container {
+    min-height: 70vmin;
+    display: grid;
+    place-content: center;
+}
+.options {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+.options > button.option {
+    display: block;
+    text-align: left;
+    padding: 12px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: crimson;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: background-color 1s;
+}
+.options > button.option:hover {background-color: blue;}
+
+footer > p {text-align: center;}
+footer > p > a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.msg {
+    background-color: rgba(50, 200, 50, .8);
+    color: white;
+    border-radius: 10px;
+    padding: 1rem 1rem 1rem .5rem;
+    display: grid;
+    place-content: center;
+    position: fixed;
+    top: 10%;
+    right: -100%;
+    transition: right 1s;
+}
+.error {background-color: rgba(200, 50, 50, .8);}
+.show {right: 3%;}
+
+@media screen and (min-width: 600px) {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .options {grid-template-columns: 1fr 1fr;}
+}
